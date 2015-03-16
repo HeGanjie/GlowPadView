@@ -56,8 +56,8 @@ public class TargetDrawable {
         public void setAlpha(float alpha) {
             mAlpha = alpha;
         }
-        public float getAlpha() {
-            return mAlpha;
+        public int getAlpha() {
+            return Math.round(mAlpha * 255);
         }
         public void draw(Canvas canvas) {
             mRealDrawable.setAlpha((int) Math.round(mAlpha * 255f));
